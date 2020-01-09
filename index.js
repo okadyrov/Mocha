@@ -25,4 +25,10 @@ function isPalindrome(str) {
         return true;
     }
 }
-module.exports = {sum, mult, isEvenNumber, isAdult, isPalindrome};
+function sortArrayUp(array) {
+    array.sort(function (a, b) {
+        return (a - b);
+    });
+    return array
+}
+module.exports = {sum, mult, isEvenNumber, isAdult, isPalindrome, sortArrayUp};
