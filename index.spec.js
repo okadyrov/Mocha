@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {sum, mult, isEvenNumber, isAdult, isPalindrome } = require('../index.js');
+const {sum, mult, isEvenNumber, isAdult, isPalindrome, sortArrayUp } = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum equals 10', () => {
@@ -36,6 +36,20 @@ describe('function Palendrome',() =>{
         assert.equal(isPalindrome(999),"not string")
     })
 });
+describe ('function sortArrayUp ', () => {
+    it ('should function sortArrayUp works correct', () => {
+        assert.deepEqual (sortArrayUp([1,2,3,4,5,6]), [1,2,3,4,5,6]);
+    });
+    it ('should function sortArrayUp does not work correct', () => {
+        assert.notEqual (sortArrayUp([1,2,3,4,5,6]), [5,6,4,3,2,1]);
+    });
+    it ('should function sortArrayUp works correct', () => {
+        assert.deepEqual (sortArrayUp([1,3,2,4,5,6]), [1,2,3,4,5,6]);
+    });
+    it ('should function sortArrayUp works correct', () => {
+        assert.deepEqual (sortArrayUp([-1,8,-17,4,5,6]), [-17,-1,4,5,6,8]);
+    });
+})
 
 
 
